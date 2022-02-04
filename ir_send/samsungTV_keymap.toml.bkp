@@ -1,0 +1,17 @@
+[[protocols]]
+name = "samsungTV"
+protocol = "nec"
+variant = "nec32"
+
+[protocols.scancodes]
+0x70702 = "KEY_POWER"
+0x70701 = "KEY_SWITCHVIDEOMODE"
+0x70760 = "KEY_UP"
+0x70761 = "KEY_DOWN"
+0x70762 = "KEY_RIGHT"
+0x70765 = "KEY_LEFT"
+0x70768 = "KEY_OK"
+0x7070b = "KEY_VOLUMEDOWN"
+0x70707 = "KEY_VOLUMEUP"
+0x70712 = "KEY_FORWARD"
+0x70710 = "KEY_BACK"

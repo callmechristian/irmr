@@ -1,0 +1,2 @@
+sudo nano /etc/rc_maps.cfg <- examples in first line
+/etc/rc_keymaps <- .toml keymaps go in here

@@ -1,0 +1,5 @@
+hash=4131405237 left 
+hash=570430813 down
+hash=3123699855 up
+hash=2324614213 right
+hash=2324614213

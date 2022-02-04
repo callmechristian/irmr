@@ -1,0 +1,25 @@
+
+'
+else 
+    if !([ -z "$input" ]) && [ -z "$output" ]
+    then
+        echo "Running with input path=$input"
+        GLOG_logtostderr=1 bazel-bin/mediapipe/examples/desktop/hand_tracking/hand_tracking_out_cpu --calculator_graph_config_file=mediapipe/graphs/hand_tracking/hand_tracking_desktop.pbtxt --input_video_path='$input'
+    fi
+    if [ -z "$input" ] && !([ -z "$output" ])
+    then
+        echo "Running with output path=$output"
+        GLOG_logtostderr=1 bazel-bin/mediapipe/examples/desktop/hand_tracking/hand_tracking_out_cpu \
+        --calculator_graph_config_file=mediapipe/graphs/hand_tracking/hand_tracking_desktop.pbtxt \
+        --output_video_path=$output
+    fi
+    if !([ -z "$input" ]) && !([ -z "$output" ])
+    then
+        echo "Running with input path=$input and output path=$output"
+        GLOG_logtostderr=1 bazel-bin/mediapipe/examples/desktop/hand_tracking/hand_tracking_out_cpu \
+        --calculator_graph_config_file=mediapipe/graphs/hand_tracking/hand_tracking_desktop.pbtxt \
+        --input_video_path=$input \
+        --output_video_path=$output
+    fi
+fi
+'
